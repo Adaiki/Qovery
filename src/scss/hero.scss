@@ -18,6 +18,9 @@
 .q-hero__text {
     max-width: 487px;
     margin-right: 70px;
+    opacity: 0;
+    animation: HeroSlideIn 1s forwards .2s ease;
+    will-change: transform, opacity, box-size;
 
     h1 {
         font-family: hk_grotesk, Helvetica;
@@ -25,6 +28,8 @@
         font-size: 46px;
         line-height: 110%;
         margin-bottom: 24px;
+        display: flex;
+        align-items: baseline;
 
         span {
             margin-left: 24px;
@@ -36,6 +41,7 @@
         font-weight: 600;
         font-size: 25px;
         line-height: 140%;
+        margin-bottom: 24px;
     }
 
     .q-hero__summary {
@@ -44,5 +50,94 @@
         color: #8686B2;
         margin-bottom: 48px;
         margin-left: 7px;
+    }
+}
+
+.q-hero__ctas {
+    display: flex;
+
+    .q-btn:first-child {
+        margin-right: 24px;
+    }
+}
+
+.q-hero__images {
+    max-width: 567px;
+    position: relative;
+    animation: HeroWrapperSlideIn 1.3s forwards .5s;
+    will-change: transform, opacity, box-size;
+
+    .q-hero__illu {
+        position: relative;
+        opacity: 0;
+        animation: HeroSlideIn .9s forwards .5s;
+        will-change: transform, opacity, box-size;
+
+        &--1 {
+            z-index: 10;
+        }
+
+        &--2 {
+            z-index: 9;
+            margin-top: -18%;
+            animation-delay: .7s;
+        }
+
+        &--3 {
+            z-index: 8;
+            margin-top: -15%;
+            animation-delay: .9s;
+        }
+
+        &.q-hero__illu--dashes {
+            position: absolute;
+            opacity: 0;
+            animation: FadeIn 1s forwards 1.1s;
+            top: -11%;
+        }
+    }
+}
+
+@keyframes HeroSlideIn {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes HeroWrapperSlideIn {
+    0% {
+        transform: translateY(-1%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes HeroSlideIn {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
