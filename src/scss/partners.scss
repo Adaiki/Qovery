@@ -1,0 +1,65 @@
+.q-partners {
+    margin-bottom: 150px;
+    h2 {
+        font-family: "hk_grotesk", Helvetica;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 110%;
+        color: #454658;
+        text-align: center;
+        margin-bottom: 43px;
+
+        // span {
+        //     transform: translate3d(0, 100%, 0);
+        //     display: block;
+        // }
+    }
+
+    ul {
+        margin: auto;
+        max-width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+            flex: 1 0;
+            text-align: center;
+            overflow: hidden;
+
+            a {
+                display: block;
+                margin: auto;
+                max-width: 237px;
+            }
+        }
+
+    li:nth-child(2) {
+        a {
+          max-width: 139px;
+        }
+      }
+  
+      li:nth-child(3) {
+        a {
+          max-width: 167px;
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .q-partners {
+      ul {
+        display: block;
+  
+        li {
+          img {
+            display: block;
+            margin: auto;
+            margin-bottom: 64px;
+          }
+        }
+      }
+    }
+  }
