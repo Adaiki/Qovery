@@ -141,3 +141,17 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 750px) {
+    .q-hero__images {
+        display: none;
+    }
+
+    .q-hero__logo {
+        margin-bottom: 32px;
+    }
+
+    .q-hero__text {
+        margin-right: 0;
+    }
+}
