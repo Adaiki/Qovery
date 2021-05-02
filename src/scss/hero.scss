@@ -3,6 +3,7 @@
     color: white;
     padding-top: 40px;
     padding-bottom: 80px;
+    height: 85vh;
 }
 
 .q-hero__logo {
@@ -153,5 +154,9 @@
 
     .q-hero__text {
         margin-right: 0;
+    }
+
+    .q-hero {
+        height: auto;
     }
 }
