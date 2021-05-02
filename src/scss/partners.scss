@@ -1,5 +1,16 @@
 .q-partners {
     margin-bottom: 150px;
+
+    &.visible {
+      h2 span {
+        animation: fadeInPartners 800ms ease-in forwards;
+      }
+  
+      ul li a {
+        animation: fadeInPartners 800ms forwards 500ms;
+      }
+    }
+
     h2 {
         font-family: "hk_grotesk", Helvetica;
         font-weight: 700;
@@ -9,10 +20,10 @@
         text-align: center;
         margin-bottom: 43px;
 
-        // span {
-        //     transform: translate3d(0, 100%, 0);
-        //     display: block;
-        // }
+        span {
+            transform: translate3d(0, 100%, 0);
+            display: block;
+        }
     }
 
     ul {
@@ -31,6 +42,7 @@
                 display: block;
                 margin: auto;
                 max-width: 237px;
+                transform: translate3d(0, 100%, 0);
             }
         }
 
@@ -61,5 +73,15 @@
           }
         }
       }
+    }
+  }
+
+  @keyframes fadeInPartners {
+    0% {
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0);
     }
   }
